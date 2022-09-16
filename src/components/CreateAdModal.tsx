@@ -1,5 +1,6 @@
+import * as Checkbox from '@radix-ui/react-checkbox'
 import * as Dialog from '@radix-ui/react-dialog'
-import { GameController } from 'phosphor-react'
+import { Check, GameController } from 'phosphor-react'
 import React from 'react'
 import Input from './form/Input'
 
@@ -58,8 +59,12 @@ function CreateAdModal() {
 							</div>
 						</div>
 					</div>
-					<div className='mt-2 flex gap-2 text-sm'>
-						<Input type='checkbox' id='' />
+					<div className='mt-2 flex gap-2 text-sm items-center'>
+						<Checkbox.Root className='w-6 h-6 p-1 rounded bg-zinc-900'>
+							<Checkbox.Indicator>
+								<Check className='w-4 h-4 text-emerald-400' />
+							</Checkbox.Indicator>
+						</Checkbox.Root>
 						<span>Costumo me conectar ao chat de voz</span>
 					</div>
 					<footer className='mt-4 flex justify-end gap-4'>
